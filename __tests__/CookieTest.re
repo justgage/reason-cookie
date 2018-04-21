@@ -38,10 +38,10 @@ describe("Cookie", () => {
       obj,
       Cookie.makeConfig(~path="", ~expires=2, ()),
     );
-    /* Note that it doesn't actualy test the expires, not sure how */;
+    /* Note that it doesn't actualy test the expires, not sure how */
     Cookie.getAsJson("hello") |> expect |> toEqual(Some(obj));
   });
-  test(".getAsJson will return None if it oesn't", () => {
+  test(".getAsJson will return None", () => {
     Cookie.remove("hello");
     Cookie.getAsJson("hello") |> expect |> toEqual(None);
   });

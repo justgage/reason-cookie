@@ -4,6 +4,10 @@ a simple way to use cross-browser cookies that contain JSON.
 
 Note this wrapps [js-cookie](https://github.com/js-cookie/js-cookie)
 
+# Is it ready for prime time?
+
+I use it on my side project. The library that's wrapped is pretty battle tested.
+
 # Install
 
 ```
@@ -40,8 +44,8 @@ let maybeCookie = Cookie.getAsJson("hello");
 
 ### set path/expiry
 
-_expires_: number of days
-_path_: where this is valid for
+* **expires**: number of days
+* **path**: where this is valid for
 
 ```reason
 Cookie.setJsonConfig(
