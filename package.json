@@ -1,6 +1,7 @@
 {
   "name": "@justgage/reason-cookie",
   "version": "0.1.0",
+  "private": false,
   "scripts": {
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
