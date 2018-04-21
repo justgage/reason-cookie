@@ -3,7 +3,7 @@
 // BuckleScript comes with its own parser for bsconfig.json, which is normal JSON,
 //with the extra support of comments and trailing commas.
 {
-  "name": "reason-cookie",
+  "name": "@justgage/reason-cookie",
   "version": "0.1.0",
   "sources": [
     {
