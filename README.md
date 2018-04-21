@@ -2,6 +2,8 @@
 
 a simple way to use cross-browser cookies that contain JSON.
 
+Note this wrapps [js-cookie](https://github.com/js-cookie/js-cookie)
+
 # Install
 
 ```
@@ -10,17 +12,18 @@ npm install --save @justgage/reason-cookie
 
 Then in your `bsconfig.json`.
 
-  ```
-    "bs-dependencies": ["@justgage/reason-cookie"],
-  ```
+```
+  "bs-dependencies": ["@justgage/reason-cookie"],
+```
 
 # API
 
 ### Working with string values
 
 ```reason
+Cookie.getAsString("hello") /* None */
 Cookie.setString("hello", "test");
-Cookie.getAsString("hello")
+Cookie.getAsString("hello") /* Some("test") */
 ```
 
 ### working JSON
@@ -32,21 +35,18 @@ let obj = Js.Json.object_(obj);
 
 Cookie.setJson("hello", obj);
 
-Cookie.getAsJson("hello") |> expect |> toEqual(Some(obj));
+let maybeCookie = Cookie.getAsJson("hello");
 ```
 
 ### set path/expiry
 
-*expires*: number of days
-*path*: where this is valid for
+_expires_: number of days
+_path_: where this is valid for
 
 ```reason
-
 Cookie.setJsonConfig(
   "hello",
   obj,
   Cookie.makeConfig(~path="", ~expires=2, ()),
 );
 ```
-
-

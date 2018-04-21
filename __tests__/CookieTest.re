@@ -41,7 +41,7 @@ describe("Cookie", () => {
     /* Note that it doesn't actualy test the expires, not sure how */;
     Cookie.getAsJson("hello") |> expect |> toEqual(Some(obj));
   });
-  test(".getAsJson will return None", () => {
+  test(".getAsJson will return None if it oesn't", () => {
     Cookie.remove("hello");
     Cookie.getAsJson("hello") |> expect |> toEqual(None);
   });
