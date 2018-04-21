@@ -1,0 +1,59 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn test
+
+PATH: 
+  /Users/justgage/.asdf/shims:/Users/justgage/.asdf/bin:/Users/justgage/.local/bin:/Users/justgage/.kiex/elixirs/elixir-1.6.0/bin:/Users/justgage/.kiex/bin:/Users/justgage/bin/google-cloud-sdk/bin:/Users/justgage/.opam/4.02.3/bin:/Users/justgage/.nix-profile/bin:/Users/justgage/.nix-profile/sbin:/Users/justgage/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/Users/justgage/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/share/dotnet:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/justgage/.rvm/bin:/Users/justgage/bin:/usr/local/sbin:/Users/justgage/.fzf/bin:/Users/justgage/Library/Android/sdk/platform-tools:/Users/justgage/Library/Android/sdk/tools
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  8.6.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "reason-cookie",
+    "version": "0.1.0",
+    "scripts": {
+      "build": "bsb -make-world",
+      "start": "bsb -make-world -w",
+      "clean": "bsb -clean-world",
+      "test": "npm run build && jest --coverage",
+      "test-watch": "npm run build && jest --watch"
+    },
+    "keywords": ["BuckleScript", "ReasonMl", "cookie", "Reason"],
+    "author": "Gage Peterson",
+    "license": "MIT",
+    "devDependencies": {
+      "@glennsl/bs-jest": "^0.4.2",
+      "bs-platform": "^3.0.0"
+    },
+    "dependencies": {
+      "js-cookie": "^2.2.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 2
+  Command: sh
+  Arguments: -c npm run build && jest --coverage
+  Directory: /Users/justgage/sandbox/reason-cookie
+  Output:
+  
+      at ProcessTermError.MessageError (/usr/local/lib/node_modules/yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/usr/local/lib/node_modules/yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:30281:17)
+      at emitTwo (events.js:125:13)
+      at ChildProcess.emit (events.js:213:7)
+      at maybeClose (internal/child_process.js:927:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
