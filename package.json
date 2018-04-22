@@ -23,5 +23,19 @@
   },
   "dependencies": {
     "js-cookie": "^2.2.0"
-  }
+  },
+  "description": "a simple way to use cross-browser cookies that contain JSON.",
+  "main": "src/Cookie.re",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justgage/reason-cookie.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justgage/reason-cookie/issues"
+  },
+  "homepage": "https://github.com/justgage/reason-cookie#readme"
 }

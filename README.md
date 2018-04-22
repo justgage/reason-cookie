@@ -25,6 +25,8 @@ Then in your `bsconfig.json`.
 ### Working with string values
 
 ```reason
+open JustgageReasonCookie;
+
 Cookie.getAsString("hello") /* None */
 Cookie.setString("hello", "test");
 Cookie.getAsString("hello") /* Some("test") */
@@ -33,6 +35,8 @@ Cookie.getAsString("hello") /* Some("test") */
 ### working JSON
 
 ```reason
+open JustgageReasonCookie;
+
 let obj = Js.Dict.empty();
 Js.Dict.set(obj, "a", Js.Json.number(2.));
 let obj = Js.Json.object_(obj);
@@ -48,6 +52,8 @@ let maybeCookie = Cookie.getAsJson("hello");
 * **path**: where this is valid for
 
 ```reason
+open JustgageReasonCookie;
+
 Cookie.setJsonConfig(
   "hello",
   obj,
