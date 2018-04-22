@@ -8,7 +8,7 @@ Note this wrapps [js-cookie](https://github.com/js-cookie/js-cookie)
 
 # Is it ready for prime time?
 
-These are just some simple bindings to the library it wraps. I've used it on some side projects but it should be _reasnably_ good. The Underlying library is pretty battle tested and can even work in older browsers.
+These are just some simple bindings to the library it wraps. I've used it on some side projects but it should be _reasonably_ good. The Underlying library is pretty battle tested and can even work in older browsers.
 
 # Install
 
@@ -22,7 +22,7 @@ Then in your `bsconfig.json`.
   "bs-dependencies": ["@justgage/reason-cookie"],
 ```
 
-# API 
+# API 😋
 
 ### Working with string values
 
@@ -34,7 +34,7 @@ Cookie.setString("hello", "test");
 Cookie.getAsString("hello") /* Some("test") */
 ```
 
-### working JSON
+### working with JSON
 
 ```reason
 open JustgageReasonCookie;
@@ -50,8 +50,8 @@ let maybeCookie = Cookie.getAsJson("hello");
 
 ### set path/expiry
 
-* **expires**: number of days
-* **path**: where this is valid for
+* **expires**: number of days till it's gone.
+* **path**: this scopes it to a page on your website (note: haven't used this personally)
 
 (see [js-cookie](https://github.com/js-cookie/js-cookie) for more uses)
 
@@ -66,5 +66,7 @@ Cookie.setJsonConfig(
 ```
 
 # Contribute?
+
+Best thing somone can do is just use it and find any problems it has.
 
 Absolutely! Just make an issue. Please note that I usually ask people to make the changes themselves.
