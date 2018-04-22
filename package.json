@@ -9,7 +9,12 @@
     "test": "npm run build && jest --coverage",
     "test-watch": "npm run build && jest --watch"
   },
-  "keywords": ["BuckleScript", "ReasonMl", "cookie", "Reason"],
+  "keywords": [
+    "BuckleScript",
+    "ReasonMl",
+    "cookie",
+    "Reason"
+  ],
   "author": "Gage Peterson",
   "license": "MIT",
   "devDependencies": {
