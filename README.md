@@ -1,6 +1,6 @@
 ![Reason Cookie Logo](https://raw.githubusercontent.com/justgage/reason-cookie/master/logo.png)
 
-# ReasonCookie
+#  🍪 ReasonCookie
 
 a simple way to use cross-browser cookies that contain JSON.
 
@@ -22,7 +22,7 @@ Then in your `bsconfig.json`.
   "bs-dependencies": ["@justgage/reason-cookie"],
 ```
 
-# API
+# API 
 
 ### Working with string values
 
