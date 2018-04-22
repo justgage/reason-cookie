@@ -1,6 +1,6 @@
-# ReasonCookie
-
 ![Reason Cookie Logo](https://raw.githubusercontent.com/justgage/reason-cookie/master/logo.png)
+
+# ReasonCookie
 
 a simple way to use cross-browser cookies that contain JSON.
 
