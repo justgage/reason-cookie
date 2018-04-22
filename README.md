@@ -8,7 +8,7 @@ Note this wrapps [js-cookie](https://github.com/js-cookie/js-cookie)
 
 # Is it ready for prime time?
 
-I use it on my side project. The library that's wrapped is pretty battle tested.
+These are just some simple bindings to the library it wraps. I've used it on some side projects but it should be _reasnably_ good. The Underlying library is pretty battle tested and can even work in older browsers.
 
 # Install
 
@@ -53,6 +53,8 @@ let maybeCookie = Cookie.getAsJson("hello");
 * **expires**: number of days
 * **path**: where this is valid for
 
+(see [js-cookie](https://github.com/js-cookie/js-cookie) for more uses)
+
 ```reason
 open JustgageReasonCookie;
 
@@ -62,3 +64,7 @@ Cookie.setJsonConfig(
   Cookie.makeConfig(~path="", ~expires=2, ()),
 );
 ```
+
+# Contribute?
+
+Absolutely! Just make an issue. Please note that I usually ask people to make the changes themselves.
