@@ -18,7 +18,7 @@ external makeConfig : (~expires: int=?, ~path: string=?, unit) => config = "";
 external setJson : (string, Js.Json.t) => unit = "set";
 
 /*
-   sets a cookie by a name to JSON
+   sets a cookie by a name to JSON with config
  */
 [@bs.module "js-cookie"]
 external setJsonConfig : (string, Js.Json.t, config) => unit = "set";
@@ -27,6 +27,11 @@ external setJsonConfig : (string, Js.Json.t, config) => unit = "set";
   sets a cookie by a name to a string
  */
 [@bs.module "js-cookie"] external setString : (string, string) => unit = "set";
+
+/*
+  sets a cookie by a name to a string with config
+ */
+[@bs.module "js-cookie"] external setStringConfig : (string, string, config) => unit = "set";
 
 /*
   removes a cookie
