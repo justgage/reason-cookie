@@ -9,6 +9,15 @@ describe("Cookie", () => {
     |> expect
     |> toBe("test");
   });
+  test(".getAsString can get stuff stored by setStringConfig", () => {
+    Cookie.setStringConfig(
+      "foo",
+      "bar",
+      Cookie.makeConfig(~path="", ~expires=2, ()),
+    );
+    /* Note that it doesn't actualy test the expires, not sure how */
+    Cookie.getAsString("foo") |> expect |> toEqual(Some("bar"));
+  });
   test(".remove can remove a cookie", () => {
     Cookie.setString("hello", "test");
     Cookie.remove("hello");
@@ -29,7 +38,7 @@ describe("Cookie", () => {
     Cookie.setJson("hello", obj);
     Cookie.getAsJson("hello") |> expect |> toEqual(Some(obj));
   });
-  test(".getAsJson can get stuff stored by setJson", () => {
+  test(".getAsJson can get stuff stored by setJsonConfig", () => {
     let obj = Js.Dict.empty();
     Js.Dict.set(obj, "a", Js.Json.number(2.));
     let obj = Js.Json.object_(obj);
